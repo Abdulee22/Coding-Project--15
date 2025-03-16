@@ -1,8 +1,8 @@
- // Task 1 - Creating the Base Structure // 
+ // Task 1: Creating the Base Structure // 
 function addRiskItem(riskName, riskLevel, department) {
 const riskDashboard = document.getElementById("riskDashboard");// The dashboard
   
-// Task 2 - Adding Risk Items//
+// Task 2: Adding Risk Items//
 const riskCard = document.createElement("div");
 riskCard.className = "risk-card"; // Created a new risk card
 riskCard.innerHTML = `
@@ -25,3 +25,21 @@ riskCard.style.backgroundColor = "green";}
 riskCard.style.backgroundColor = "yellow";} 
      else if (riskLevel === "High") {
 riskCard.style.backgroundColor = "red";}} // Color Change
+
+// Task 5: Implementing Bulk Updates //
+function increaseRiskLevels() {
+const riskCards = document.querySelectorAll(".risk-card");
+riskCards.forEach(card => {
+const riskLevelElement = card.querySelector("p");
+let riskLevel = riskLevelElement.innerText.replace("Risk Level: ", "");
+    
+if (riskLevel === "Low") {
+riskLevelElement.innerText = "Risk Level: Medium";
+card.style.backgroundColor = "yellow";}
+     else if (riskLevel === "Medium") {
+ riskLevelElement.innerText = "Risk Level: High";
+card.style.backgroundColor = "red";}});}
+const increaseRiskLevelsButton = document.getElementById("increaseRiskLevels");// Added event listener to the Increase Risk button
+ increaseRiskLevelsButton.addEventListener("click", increaseRiskLevels);
+    
+ 
