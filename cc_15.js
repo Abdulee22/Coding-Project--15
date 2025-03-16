@@ -12,3 +12,8 @@ riskCard.innerHTML = `
     <button class="resolve-btn">Resolve</button>`; // Adding content to the risk card
 riskDashboard.appendChild(riskCard);// Appended the card to the dashboard
 
+// Task 3: Removing Risk Items // 
+const resolveButton = riskCard.querySelector(".resolve-btn");
+resolveButton.addEventListener("click", (event) => {
+event.stopPropagation(); // Prevent event bubbling
+riskDashboard.removeChild(riskCard);}) // Remove the card
