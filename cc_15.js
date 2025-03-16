@@ -17,3 +17,11 @@ const resolveButton = riskCard.querySelector(".resolve-btn");
 resolveButton.addEventListener("click", (event) => {
 event.stopPropagation(); // Prevent event bubbling
 riskDashboard.removeChild(riskCard);}) // Remove the card
+
+// Task 4: Categorizing Risks by Level //
+if (riskLevel === "Low") {
+riskCard.style.backgroundColor = "green";}
+     else if (riskLevel === "Medium") {
+riskCard.style.backgroundColor = "yellow";} 
+     else if (riskLevel === "High") {
+riskCard.style.backgroundColor = "red";}} // Color Change
