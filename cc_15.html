@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Management Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4d03f; 
+            color: black; 
+        }
+        .risk-card {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            width: 300px;
+            background-color: #d2b48c; 
+            color: black; 
+        }
+        #riskDashboard {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: rgba(210, 180, 140, 0.5); 
+            border-radius: 8px;
+            color: black; 
+        }
+        header {
+            background-color: #8b7355; 
+            padding: 15px;
+            text-align: center;
+            color: black; 
+        }
+        footer {
+            position: fixed;
+            text-align: center;
+            bottom: 0;
+            width: 100%;
+            background-color: #a1887f; 
+            padding: 10px;
+            color: black; 
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: black; 
+        }
+        input, select, button {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #8b7355; 
+            border-radius: 5px;
+            width: 100%;
+            max-width: 300px;
+            color: black; 
+        }
+        button {
+            background-color: #8b7355; 
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #a1887f; 
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Risk Management Dashboard</h1>
+    </header>
+
+    <main>
+        <!-- Risk List Area -->
+        <h2>Risk Items Below</h2>
+        <div id="riskDashboard">
+            <!-- Risk items will be added here dynamically -->
+        </div>
+
+        <!-- Controls to Add Risk Items -->
+        <form id="addRiskForm">
+            <label for="riskName">Risk Name:</label>
+            <input type="text" id="riskName" required>
+            
+            <label for="riskLevel">Risk Level:</label>
+            <select id="riskLevel">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            
+            <label for="department">Department:</label>
+            <input type="text" id="department" required>
+            
+            <button type="submit">Add Risk</button>
+        </form>
+        <button id="increaseRiskLevels">Increase Risk Levels</button>
+    </main>
+
+    <footer>
+        The Footer
+    </footer>
+
+    <script src="cc_15.js"></script> <!-- Link to your JavaScript file -->
+
+</body>
+</html>
