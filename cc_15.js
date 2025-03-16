@@ -41,5 +41,19 @@ card.style.backgroundColor = "yellow";}
 card.style.backgroundColor = "red";}});}
 const increaseRiskLevelsButton = document.getElementById("increaseRiskLevels");// Added event listener to the Increase Risk button
  increaseRiskLevelsButton.addEventListener("click", increaseRiskLevels);
-    
+
+ // Task 6: Handling Event Propagation //
+
+const riskDashboard = document.getElementById("riskDashboard");
+riskDashboard.addEventListener("click", (event) => {
+if (event.target.classList.contains("risk-card")) {
+console.log("Risk card clicked:", event.target.querySelector("h3").innerText);}});
+
+// Test Case //
+addRiskItem("Cybersecurity Threat", "High", "IT");
+addRiskItem("HR Compliance Issue", "Low", "Human Resources");
+addRiskItem("Market Fluctuations", "High", "Finance");
+addRiskItem("Data Breach", "High", "IT");
+addRiskItem("Supply Chain Disruption", "Medium", "Operations");
+addRiskItem("Employee Retention", "Low", "HR");
  
